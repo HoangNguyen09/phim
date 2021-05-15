@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/chieurap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Chiếu rạp"
+                            android:background="?android:attr/selectableItemBackground">
+                        </Button>
+
+                        <Button
+                            android:id="@+id/sapchieu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sắp chiếu"
+                            android:background="?android:attr/selectableItemBackground">
+                        </Button>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="300dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/banner3"></ImageView>
+
+                        <Button
+                            android:id="@+id/hoathinh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Hoạt hình"
+                            android:background="?android:attr/selectableItemBackground">
+                        </Button>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="270dp">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_favorite"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+
+                        <ImageButton
+                            android:id="@+id/play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_play"
+                            android:background="#ffffff">
+                        </ImageButton>
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_infor"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phim mới"
+                    android:background="#000000"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="30dp"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:src="@drawable/banner1"
+                            android:scaleType="fitXY"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phim 1"
+                            android:textColor="@color/white"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:src="@drawable/banner2"
+                            android:scaleType="fitXY"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phim 2"
+                            android:textColor="@color/white"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:src="@drawable/banner3"
+                            android:scaleType="fitXY"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phim 3"
+                            android:textColor="@color/white"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phim đang nổi"
+                    android:background="#000000"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:src="@drawable/banner1"
+                            android:scaleType="fitXY"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phim 1"
+                            android:textColor="@color/white"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:src="@drawable/banner2"
+                            android:scaleType="fitXY"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phim 2"
+                            android:textColor="@color/white"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:src="@drawable/banner3"
+                            android:scaleType="fitXY"
+                            android:background="?android:attr/selectableItemBackground">
+                        </ImageButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phim 3"
+                            android:textColor="@color/white"
+                            android:gravity="center">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="bottom|center">
+
+            <ImageButton
+                android:id="@+id/btnhome"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_home"
+                android:textSize="8dp">
+            </ImageButton>
+
+
+
+            <ImageButton
+                android:id="@+id/btndownload"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_download"
+                android:textSize="8dp">
+            </ImageButton>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
